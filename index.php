@@ -44,7 +44,7 @@ $timestamp = strtotime($hsl['tgl_pengumuman']);
 	</nav>
 
 	<div class="container">
-		<h3>Pengumuman Kelulusan Siswa SMAN 15 Bandung Tahun <?= $hsl['tahun'] ?></h3>
+		<h3><strong>Pengumuman Kelulusan Siswa SMAN 15 Bandung Tahun <?= $hsl['tahun'] ?></strong></h3>
 		<!-- countdown -->
 
 		<div id="clock" class="lead"></div>
@@ -67,6 +67,10 @@ $timestamp = strtotime($hsl['tgl_pengumuman']);
 							<td><?php echo $data['no_nisn']; ?></td>
 						</tr>
 						<tr>
+							<td>NIS</td>
+							<td><?php echo $data['no_nis']; ?></td>
+						</tr>
+						<tr>
 							<td>Nama Siswa</td>
 							<td><?php echo $data['nama']; ?></td>
 						</tr>
@@ -74,14 +78,30 @@ $timestamp = strtotime($hsl['tgl_pengumuman']);
 							<td>Kelas</td>
 							<td><?php echo $data['jur']; ?></td>
 						</tr>
+						<tr align="center">
+							<td colspan="2">
+								<h4><strong>KRITERIA KELULUSAN</strong></h4>
+							</td>
+						</tr>
+						<tr>
+							<td>SEM 1 - 6</td>
+							<td><?php echo $data['kriteria1']; ?></td>
+						</tr>
+						<tr>
+							<td>Perilaku</td>
+							<td><?php echo $data['kriteria2']; ?></td>
+						</tr>
+						<tr>
+							<td>PSAJ</td>
+							<td><?php echo $data['kriteria3']; ?></td>
+						</tr>
 					</table>
 
 					<?php
 					if ($data['status'] == 1) {
-						echo '<div class="alert alert-success" role="alert"><strong>SELAMAT !</strong> Anda dinyatakan MASUK sebagai Siswa Eligible.</div>';
-						echo '<div class="alert alert-secondary" role="alert">Silahkan Screenshot dan Hubungi BK masing-masing.</div>';
+						echo '<div class="alert alert-success" role="alert"><strong>SELAMAT !</strong> Anda dinyatakan <strong>LULUS</strong> pada Tahun Pelajaran 2022/2023 di SMA Negeri 15 Bandung dengan <strong>Kriteria Kelulusan</strong> di atas.</div>';
 					} else {
-						echo '<div class="alert alert-danger" role="alert"><strong>MAAF !</strong> Anda dinyatakan TIDAK MASUK sebagai Siswa Eligible. TETAP SEMANGAT!.</div>';
+						echo '<div class="alert alert-danger" role="alert"><strong>MAAF !</strong> Anda dinyatakan <strong>TIDAK LULUS</strong> pada Tahun Pelajaran 2022/2023 di SMA Negeri 15 Bandung. TETAP SEMANGAT!.</div>';
 					}
 					?>
 

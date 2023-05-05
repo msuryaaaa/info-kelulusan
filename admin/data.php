@@ -44,6 +44,9 @@ if (isset($_SESSION['logged']) && !empty($_SESSION['logged'])) {
 						<th rowspan="2" style="text-align:center">NISN</th>
 						<th rowspan="2" style="text-align:center">Nama Siswa</th>
 						<th rowspan="2" style="text-align:center">Kelas</th>
+						<th rowspan="2" style="text-align:center">Kriteria1</th>
+						<th rowspan="2" style="text-align:center">Kriteria2</th>
+						<th rowspan="2" style="text-align:center">Kriteria3</th>
 						<th rowspan="2" style="text-align:center">Status</th>
 					</tr>
 				</thead>
@@ -73,6 +76,9 @@ if (isset($_SESSION['logged']) && !empty($_SESSION['logged'])) {
 							echo '<td>' . $data['no_nisn'] . '</td>';
 							echo '<td>' . $data['nama'] . '</td>';
 							echo '<td style="text-align:center">' . $data['jur'] . '</td>';
+							echo '<td style="text-align:center">' . $data['kriteria1'] . '</td>';
+							echo '<td style="text-align:center">' . $data['kriteria2'] . '</td>';
+							echo '<td style="text-align:center">' . $data['kriteria3'] . '</td>';
 							echo '<td style="text-align:center">';
 							echo ($data['status'] == 1) ? '<b>Lulus<b>' : '<em>Tidak Lulus</em>';
 							echo '</td>';
