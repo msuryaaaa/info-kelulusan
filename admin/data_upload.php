@@ -13,7 +13,7 @@ include "../database.php";
 			
 			while (($unData = fgetcsv($file, 10000, ";")) !== FALSE){
 				//query insert
-				$sql = "INSERT INTO un_siswa VALUES('$unData[0]','$unData[1]','$unData[2]','$unData[3]')";
+				$sql = "INSERT INTO un_siswa VALUES('$unData[0]','$unData[1]','$unData[2]','$unData[3]','$unData[4]','$unData[5]','$unData[6]','$unData[7]','$unData[8]')";
 				$res = mysqli_query($db_conn,$sql);
 				
 				if(! $res){
@@ -33,4 +33,3 @@ include "../database.php";
 } else {
 	header('Location: ./login.php');
 }
-?>

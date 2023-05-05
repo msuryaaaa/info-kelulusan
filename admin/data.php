@@ -85,7 +85,7 @@ if (isset($_SESSION['logged']) && !empty($_SESSION['logged'])) {
 							echo '</tr>';
 						}
 					} else {
-						echo '<tr><td colspan="8"><em>Belum ada data! Segera lakukan upload data.</em></td></tr>';
+						echo '<tr><td colspan="9"><em>Belum ada data! Segera lakukan upload data.</em></td></tr>';
 					}
 					?>
 				</tbody>
